@@ -287,7 +287,7 @@ class WuZhu {
     }
     return this.db.local.put(doc).then(res =>{
       evt.target.rev = res.rev;
-      if (first) page(`/${res._id}`);
+      if (first) page(`/${res.id}`);
       new Toast((evt.type === "autoSaveArticle") ? "Autosaved Article" : "Article Saved");
     }).catch(err => {
       if (err.name == "conflict"){
