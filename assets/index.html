@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WuZhu</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="application-name" content="WuZhu" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="WuZhu" />
+    <meta name="msapplication-TileColor" content="#303F9F" />
+    <meta name="theme-color" content="#303F9F" />
+    <meta name="msapplication-TileImage" content="img/512.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/img/512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/img/192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" type="image/png" href="/img/512.png" sizes="512x512" />
+    <link rel="apple-touch-icon-precomposed" href="/img/512.png" />
+    <link rel="shortcut icon" sizes="512x512" href="/img/512.png" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <!-- Scripts  -->
+    <script defer src="/config.js"></script>
+    <script defer src="/js/page.js"></script>
+    <script defer src="/js/toast.js"></script>
+    <script defer src="/js/vendor/page/page.js"></script>
+    <script defer src="/js/vendor/showdown/dist/showdown.min.js"></script>
+    <script defer src="/js/vendor/pouchdb/dist/pouchdb.min.js"></script>
+    <script defer src="/js/vendor/pouchdb-authentication/dist/pouchdb.authentication.min.js"></script>
+    <script defer src="/js/app.js"></script>
+    <!-- Imports -->
+    <link rel="import" href="/html/chit.html" />
+    <link rel="import" href="/html/login.html" />
+    <link rel="import" href="/html/search-card.html" />
+    <link rel="import" href="/html/search-results.html" />
+    <link rel="import" href="/html/side-nav.html" />
+    <link rel="import" href="/html/header.html" />
+    <link rel="import" href="/html/editor.html" />
+    <link rel="import" href="/html/article.html" />
+  </head>
+  <body>
+    <wuzhu-header></wuzhu-header>
+    <side-nav>
+      <ul id="links">
+        <li onclick="page('/')">Index</li>
+        <li onclick="page('/new')">New Article</li>
+      </ul>
+      <span>Favorites:</span>
+      <ul id="favs">
+      </ul>
+    </side-nav>
+    <search-results class="hidden"></search-results>
+    <view></view>
+  </body>
+</html>

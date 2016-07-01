@@ -1,0 +1,126 @@
+@import "_main";
+
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+search-results {
+  flex-grow: 1;
+  padding-top: 6vh;
+}
+
+wuzhu-header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+view {
+  height: 100%;
+  padding: 6vh 1em;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+wiki-article {
+  width: 100%;
+}
+
+side-nav > ul {
+  padding-top: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+side-nav > span{
+  padding: 0.5em;
+}
+
+side-nav li {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+}
+
+side-nav li:hover {
+  background: #CCC;
+}
+
+side-nav a {
+  color: black;
+  -webkit-appearance: none;
+  text-decoration: none;
+}
+
+toast {
+  will-change: transform;
+  transform: translate(0px, 3em);
+  display: inline-flex;
+  position: fixed;
+  justify-content: space-between;
+  bottom: 0;
+  left: 2%;
+  min-width: 25vw;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  padding: 0.5em;
+  transition: transform, 0.5s, cubic-bezier(.17,.67,.83,.67);
+  z-index: 99999;
+  @include respond-to(lt-large-screens){
+    left: 1vw;
+    width: 96vw;
+  }
+  &:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
+toast.show {
+  transform: none;
+}
+
+toast.info {
+  background-color: #536DFE;
+}
+
+toast.alert {
+  background-color: #F44336;
+}
+
+toast.warning {
+  background-color: #FFC107;
+  color: black;
+  > button:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+}
+
+toast > button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+toast > button:hover {
+  background-color: rgba(255,255,255,0.2);
+  transition: background-color, 0.5s, cubic-bezier(.17,.67,.83,.67);
+}

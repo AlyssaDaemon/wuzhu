@@ -1,0 +1,16 @@
+@import "_main";
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+#results {
+  display: flex;
+  align-items: flex-start;
+}
+#named {
+  padding: 0.5em;
+  display: inline-flex;
+  justify-content: flex-start;
+}

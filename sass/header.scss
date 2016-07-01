@@ -1,0 +1,40 @@
+@import "_main";
+
+header {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #303F9F;
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: all 0.5s cubic-bezier(.17,.67,.84,.65);
+}
+
+.header__menu-toggle {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+header .search {
+  display: inline-flex;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  padding: 0px 0.5em;
+  margin-right: 0.5em;
+}
+
+header .search input, header .search input:active {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: larger;
+  padding-left: 0.1em;
+}

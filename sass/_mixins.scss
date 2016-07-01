@@ -1,0 +1,40 @@
+@import "_variables";
+
+@mixin respond-to($media){
+  @if $media == small-screens {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == large-screens {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+  }
+  @else if $media == xlarge-screens {
+    @media only screen and (min-width: $break-large + 1) and (max-width: $break-xlarge) { @content; }
+  }
+  @else if $media == retina {
+    @media only screen and (min-width: $break-xlarge) { @content; }
+  }
+  @else if $media == gt-small-screens {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $media == gt-medium-screens {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == gt-large-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == gt-xlarge-screens {
+    @media only screen and (min-width: $break-xlarge) { @content; }
+  }
+  @else if $media == lt-xlarge-screens {
+    @media only screen and (max-with: $break-xlarge - 1) { @content; }
+  }
+  @else if $media == lt-large-screens {
+    @media only screen and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == lt-medium-screens {
+    @media only screen and (max-width: $medium-break - 1) { @content; }
+  }
+}

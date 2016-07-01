@@ -1,0 +1,18 @@
+<template id="wiki-chit">
+  <style>
+    @import "/css/chit.css";
+  </style>
+  <div class="container btn">
+    <span id="chit"></span>
+    <a id="delete" class="icon">clear</a>
+  </div>
+
+</template>
+<script src="/js/chit.js"></script>
+<script>
+"use strict";
+(() => {
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerChit(doc);
+})();
+</script>

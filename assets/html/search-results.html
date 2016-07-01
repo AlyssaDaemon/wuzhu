@@ -1,0 +1,22 @@
+<template id="searchResult">
+  <style>
+  @import "/css/search-results.css";
+  </style>
+  <div id="container" class="hidden" role="search">
+    <div id="results">
+      <div id="named">
+
+      </div>
+      <div id="tagged">
+
+      </div>
+    </div>
+  </div>
+</template>
+<script src="/js/search-results.js" ></script>
+<script>
+(()=> {
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerSearchResults(doc);
+})();
+</script>

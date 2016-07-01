@@ -1,0 +1,9 @@
+.vscode
+node_modules
+bower_components
+bs-config.json
+build
+config.json
+scp.js
+**/*.DS_Store
+palette.png

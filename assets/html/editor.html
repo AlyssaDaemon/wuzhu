@@ -1,0 +1,71 @@
+<template id="editor">
+  <style>
+    @import "/css/editor.css";
+  </style>
+  <div id="container" flex>
+    <div id="editarea" flex>
+      <div id="toolbar" flex>
+       <a class="barbutton btn" data-character="#">
+          <span class="product-sans" data-character="#">H1</span>
+        </a>
+        <a class="barbutton btn" data-character="##">
+         <span class="product-sans" data-character="##">H2</span>
+        </a>
+        <a class="barbutton btn" data-character="###">
+         <span class="product-sans" data-character="###">H3</span>
+        </a>
+        <a class="barbutton btn" data-character="**">
+         <span class="icon" data-character="**">format_bold</span>
+        </a>
+        <a class="barbutton btn" data-character="*">
+         <em class="icon" data-character="*">format_italic</em>
+        </a>
+        <a class="barbutton btn" data-character="u">
+         <span class="icon" data-character="u">format_underlined</span>
+        </a>
+        <a class="barbutton btn" data-character="~~" >
+         <span class="icon" data-character="~~">format_strikethrough</span>
+        </a>
+        <a class="barbutton btn" data-character="- ">
+          <span class="icon" data-character="- ">format_list_bulleted</span>
+        </a>
+        <a class="barbutton btn" data-character="1. ">
+         <span class="icon" data-character="1. ">format_list_numbered</span>
+        </a>
+        <a class="barbutton btn" data-character="> ">
+          <i class="icon" data-character="> ">format_quote</i>
+        </a>
+        <a class="barbutton btn" data-character="[]()">
+          <i class="icon" data-character="[]()">insert_link</i>
+        </a>
+        <a class="barbutton btn" data-character="![]()">
+          <i class="icon" data-character="![]()">insert_photo</i>
+        </a>
+        <a class="barbutton btn" data-character="```">
+          <span class="icon" data-character="```">code</span>
+        </a>
+        <a class="barbutton btn" data-character="|">
+          <span class="icon" data-character="|">border_all</span>
+        </a>
+        <a class="barbutton btn" data-character="- [ ] ">
+          [<span class="icon" data-character="- [ ] ">check</span>]
+        </a>
+        <a class="barbutton btn" id="previewButton">
+          <span class="icon">remove_red_eye</span>
+        </a>
+      </div>
+      <textarea id="editspace" placeholder="You can edit in here"></textarea>
+      <div id="previewArea" class="hidden"></div>
+    </div>
+  </div>
+</template>
+<script src="/js/vendor/showdown/dist/showdown.min.js"></script>
+<script src="/js/editor.js"></script>
+<script type="text/javascript">
+  "use strict";
+  (() => {
+   let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+   registerEditor(doc);
+
+  })();
+</script>

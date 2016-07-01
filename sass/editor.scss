@@ -1,0 +1,58 @@
+    @import "_main";
+    #container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    #toolbar {
+      display: inline-flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5em;
+    }
+
+    #previewArea {
+      padding: 0.5em;
+      flex-grow: 1;
+    }
+
+    .barbutton {
+      background-color: #536DFE;
+      color: white;
+      width: 3.5em;
+      height: 1.5em;
+      border-radius: 2px;
+      margin: .2em;
+    }
+    #previewButton.previewActive {
+      background-color: orange;
+      color: white;
+    }
+    #editspace {
+      display: flex;
+      font-size: larger;
+      flex-grow: 1;
+      -webkit-appearance: none;
+      border-color: transparent;
+      outline: none;
+      border-radius: 5px;
+      resize: none;
+      padding: 0.5em;
+      word-wrap: normal;
+    }
+    #editspace :focus {
+      outline: none;
+      border: none;
+    }
+    #actions {
+      display: inline-flex;
+      align-self: flex-end;
+      justify-content: flex-end;
+      padding: 1em;
+    }
+    #editarea {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }

@@ -1,0 +1,21 @@
+<template id="searchCard">
+  <style>
+  @import "/css/search-card.css";
+  </style>
+  <div class="container">
+    <h1 id="title"></h1>
+    <div id="blurb">
+
+    </div>
+    <div id="tags">
+
+    </div>
+  </div>
+</template>
+<script src="/js/search-card.js"></script>
+<script>
+(() => {
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerSearchCard(doc);
+})();
+</script>

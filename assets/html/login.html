@@ -1,0 +1,22 @@
+<template id="loginTemplate">
+  <style>
+    @import "/css/login.css";
+  </style>
+
+  <div class="modal">
+    <div class="card">
+      <form>
+        <span>User: <input type="text" id="username" /></span><br />
+        <span>Pass: <input type="password" id="password" /></span><br  />
+        <input type="submit" id="submit"/>
+      </form>
+    </div>
+  </div>
+</template>
+<script src="/js/login.js"></script>
+<script>
+(()=>{
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerLogin(doc);
+})();
+</script>

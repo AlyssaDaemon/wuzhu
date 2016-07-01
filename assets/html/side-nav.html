@@ -1,0 +1,23 @@
+<template id="sideNav">
+  <style>
+    @import "/css/side-nav.css";
+  </style>
+  <aside class="js-side-nav side-nav">
+    <nav class="js-side-nav-container side-nav__container">
+      <button class="js-menu-hide side-nav__hide material-icons">close</button>
+      <header class="side-nav__header">
+        WuZhu
+      </header>
+      <content class="side-nav__content">
+
+      </content>
+    </nav>
+  </aside>
+</template>
+<script src="/js/side-nav.js" ></script>
+<script>
+(() => {
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerSideNav(doc);
+})();
+</script>

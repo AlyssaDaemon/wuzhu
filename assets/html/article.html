@@ -1,0 +1,51 @@
+<template id="wiki-article">
+  <style>
+    @import "/css/article.css";
+  </style>
+  <div class="container" flex>
+    <div class="articleContainer">
+      <span id="titleContainer">
+        <h1 id="title"></h1><span id="star" class="icon">star_border</span>
+      </span>
+      <article>
+
+      </article>
+      <div class="tags">
+
+      </div>
+    </div>
+    <div class="actions" flex>
+      <button id="editButton" class="btn fab">
+        <i class="icon">edit</i>
+      </button>
+    </div>
+    <div class="editor hidden" flex>
+      <div id="titleBox">
+        <input id="titleInput" placeholder="Title" type="text" />
+      </div>
+      <wiki-editor flex>
+      </wiki-editor>
+      <span>Tags:</span>
+      <div class="tags">
+        <input id="tagAdder" placeholder="Add a tag..." type="text" />
+      </div>
+      <div class="actions" flex>
+        <button id="saveButton" class="btn fab">
+          <i class="icon">save</i>
+        </button>
+        <button id="deleteBtn" class="btn fab hidden">
+          <i class="icon">delete</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+<script src="/js/article.js"></script>
+<script>
+  "use strict";
+  (() => {
+    let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+    registerArticle(doc);
+
+  })();
+</script>

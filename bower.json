@@ -1,0 +1,26 @@
+{
+  "name": "tyr-net",
+  "authors": [
+    "Alyssa Herzog <alyssadaemon@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "Apache-2.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pouchdb": "^5.4.4",
+    "showdown": "^1.4.1",
+    "pouchdb-find": "^0.10.2",
+    "page": "visionmedia/page.js#^1.7.1",
+    "pouchdb-authentication": "^0.5.1",
+    "webcomponentsjs": "^0.7.22"
+  }
+}

@@ -1,0 +1,21 @@
+<template id="headerTemplate">
+  <style>
+    @import "/css/header.css";
+  </style>
+<header role="banner">
+  <a class="menu-toggle js-menu-show icon">menu</a>
+  <div id="searchBar" class="search">
+    <span class="icon">search</span>
+    <input type="text" class="search" />
+  </div>
+</header>
+</template>
+<script src="/js/header.js"></script>
+<script>
+  "use strict";
+  (() => {
+  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
+  registerHeader(doc);
+
+  })();
+</script>
