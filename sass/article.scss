@@ -58,6 +58,7 @@ article {
 
 #titleInput {
   -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
   border: none;
   border-bottom: 1px rgba(100,100,100,0.5) solid;
@@ -80,12 +81,20 @@ div.tags {
   border-bottom: 1px rgba(100,100,100,0.5) solid;
 }
 
+wiki-chit {
+  padding: 0vw 0.25em;
+  &:first-child {
+    padding: 0px 0.25em 0px 0px;
+  }
+}
+
 .articleContainer > .tags {
   flex-direction: row;
 }
 
 #tagAdder {
   -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
   border: none;
   flex-grow: 1;
