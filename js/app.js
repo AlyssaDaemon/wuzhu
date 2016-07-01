@@ -280,11 +280,15 @@ class WuZhu {
 
   _saveArticle(evt){
     let doc = evt.target._page.doc;
+    let first = false;
     if (doc._id === null){
       doc._id = doc.title.toLowerCase().replace(/ /g, "-");
+      first = true;
     }
     return this.db.local.put(doc).then(res =>{
       evt.target.rev = res.rev;
+      if (first) page(`/${res._id}`);
+      new Toast((evt.type === "autoSaveArticle") ? "Autosaved Article" : "Article Saved");
     }).catch(err => {
       if (err.name == "conflict"){
         new Toast("Document has a Conflict, did not save.", "alert", 5000);
@@ -348,6 +352,7 @@ class WuZhu {
   _addEventListeners(){
     document.addEventListener("togglefav", this._toggleFav);
     document.addEventListener("saveArticle", this._saveArticle);
+    document.addEventListener("autoSaveArticle", this._saveArticle);
     document.addEventListener("deleteArticle", this._deleteArticle);
     document.addEventListener("search", this._search)
   }

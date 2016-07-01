@@ -142,8 +142,7 @@ function registerArticle(doc){
         this._page.title = this._titleInput.value;
         this._title.textContent = this._titleInput.value;
       }
-      new Toast("Autosaving Article");
-      this.dispatchEvent(new Event("saveArticle", { bubbles: true }));
+      this.dispatchEvent(new Event("autoSaveArticle", { bubbles: true }));
     }
 
     _toggleEditable(evt) {
@@ -159,10 +158,6 @@ function registerArticle(doc){
         actionArea.classList.remove("hidden");
         this._articleEl.classList.remove("hidden");
       }
-
-    }
-
-    _addchit(name){
 
     }
 
