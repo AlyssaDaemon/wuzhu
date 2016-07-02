@@ -10,6 +10,14 @@ function registerHeader(doc){
       this._addEventHandlers();
     }
 
+    get search(){
+      return this._searchBar.value;
+    }
+
+    set search(v){
+      this._searchBar.value = v;
+    }
+
 
     _handleClick(evt){
       document.dispatchEvent(new Event("toggleNav"));
