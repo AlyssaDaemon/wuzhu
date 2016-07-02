@@ -106,7 +106,7 @@ class WuZhu {
     while(this._stage.firstChild){
       this._stage.removeChild(this._stage.firstChild);
     }
-    if (this._header.search.length > 0) {
+    if (this._header.search && this._header.search.length > 0) {
       this._header.search = "";
     }
     if (arguments[1] && (typeof arguments[1] === "function")){
