@@ -20,6 +20,7 @@ class WuZhu {
     this._sidenav = document.querySelector("side-nav");
     this._stage = document.querySelector("view");
     this._searchEl = document.querySelector("search-results");
+    this._header = document.querySelector("wuzhu-header")
 
 
     this.showIndex = this.showIndex.bind(this);
@@ -104,6 +105,9 @@ class WuZhu {
     }
     while(this._stage.firstChild){
       this._stage.removeChild(this._stage.firstChild);
+    }
+    if (this._header._searchBar.value.length > 0) {
+      this._header._searchBar.value = "";
     }
     if (arguments[1] && (typeof arguments[1] === "function")){
       arguments[1]();
