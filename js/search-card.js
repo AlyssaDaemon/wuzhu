@@ -37,7 +37,7 @@ function registerSearchCard(doc){
 
     _handleClick(evt) {
       evt.preventDefault();
-      page(`/${this._page.url}`);
+      page(`/${this._page._id}`);
     }
 
   }
