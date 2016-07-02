@@ -126,7 +126,7 @@ class WuZhu {
           let found = false;
           for(let v of tags){
             if(v.name === tag.key){
-              v.articles.push(v.doc);
+              v.articles.push(tag.doc);
               found = true;
               break;
             }
