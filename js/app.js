@@ -99,7 +99,7 @@ class WuZhu {
 
   _clearStage() {
     if (this._stage.classList.contains("hidden")){
-      this._stage.classList.remote("hidden");
+      this._stage.classList.remove("hidden");
       this._searchEl.classList.add("hidden");
     }
     while(this._stage.firstChild){
