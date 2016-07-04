@@ -6,6 +6,7 @@ function registerHeader(doc){
       this._root.appendChild(doc.importNode(this._template.content, true));
       this._menu = this._root.querySelector('a');
       this._searchBar = this._root.querySelector('input');
+      this._handleKeyUp = this._handleKeyUp.bind(this);
 
       this._addEventHandlers();
     }
@@ -27,9 +28,17 @@ function registerHeader(doc){
       document.dispatchEvent(new CustomEvent("search", {detail: evt.target.value}));
     }
 
+    _handleKeyUp(evt){
+      if (evt.keyCode === 13){
+        this._handleInput(evt);
+      }
+      return true;
+    }
+
     _addEventHandlers(){
       this._menu.addEventListener('click', this._handleClick);
       this._searchBar.addEventListener('input', this._handleInput);
+      this._searchBar.addEventListener('keyup', this._handleKeyUp);
     }
 
 
