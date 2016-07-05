@@ -12,6 +12,24 @@ header {
   transition: all 0.5s cubic-bezier(.17,.67,.84,.65);
 }
 
+#right-side {
+  display: inline-flex;
+  align-items: center;
+  .user-view {
+    cursor: pointer;
+    align-items: center;
+    img {
+      width: 5vh;
+      height: 5vw;
+    }
+    color: $icon-color;
+    transition: background-color 0.5s cubic-bezier(.17,.67,.84,.65);
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}
+
 .header__menu-toggle {
   background: none;
   border: none;
@@ -28,6 +46,9 @@ header .search {
   border-radius: 25px;
   padding: 0px 0.5em;
   margin-right: 0.5em;
+  .icon {
+    align-self: center;
+  }
 }
 
 header .search input, header .search input:active {

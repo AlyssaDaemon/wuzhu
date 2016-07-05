@@ -1,0 +1,59 @@
+<template id="user-view">
+  <style>
+    @import "/css/user.css";
+  </style>
+  <div id="container" class="container modal hidden">
+    <div class="card">
+      <div class="header">
+        <span><span class="username"></span>'s Settings</span>
+        <button class="icon" id="closeButton">close</button>
+      </div>
+      <div class="inner-card">
+        <div id="left-side">
+          <ul>
+            <li class="home">
+              <span class="home icon">home</span>
+              <span class="home name">Home</span>
+            </li>
+            <li class="security">
+              <span class="security icon">security</span>
+              <span class="security name">Security</span>
+            </li>
+            <li class="spacer"></li>
+            <li class="logout">
+              <span class="icon">exit_to_app</span>
+              <span class="name">Logout</span>
+            </li>
+          </ul>
+        </div>
+        <div id="right-side" class="content">
+          <div class="home">
+            <b>Home Settings Not Yet Implemented, try Security</b>
+          </div>
+          <div class="security hidden">
+            <div id="changePassword">
+              <span>Change Password:</span>
+              <input id="oldPassword" type="password" placeholder="Old Password"/>
+              <input id="newPassword" type="password" placeholder="New Password"/>
+              <input id="repeatPassword" type="password" placeholder="Repeat New Password"/>
+              <div class="button-holder">
+                <button id="passwordSubmit" class="btn">
+                  Submit
+                </button>
+                <button id="passwordReset" class="btn">
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script src="/js/user.js"></script>
+<script>
+  (function(){
+    registerUserView(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
+  })();
+</script>

@@ -21,6 +21,7 @@ class WuZhu {
     this._stage = document.querySelector("view");
     this._searchEl = document.querySelector("search-results");
     this._header = document.querySelector("wuzhu-header");
+    this._userView = document.querySelector("user-view");
 
 
     this.showIndex = this.showIndex.bind(this);
@@ -41,6 +42,8 @@ class WuZhu {
     this._search = this._search.bind(this);
     this._parseTitles = this._parseTitles.bind(this);
     this._initServiceWorker = this._initServiceWorker.bind(this);
+    this._handleLogout = this._handleLogout.bind(this);
+    this._handleChangePassword = this._handleChangePassword.bind(this);
 
 
     this._addEventListeners();
@@ -177,6 +180,7 @@ class WuZhu {
       });
     }).then(metadata => {
       this._user = { name: user, metadata: metadata };
+      this._userView.username = user;
       localStorage.setItem("user", JSON.stringify(metadata));
       metadata.starred_articles.forEach((article) => {
         let li = document.createElement("li");
@@ -355,6 +359,22 @@ class WuZhu {
     }
     new Toast(doc.title + (favved ? " unfaved" : " faved" ));
   }
+  _handleLogout(){
+    this.db.remote.logout().then(() =>{
+      location.reload();
+    })
+  }
+
+  _handleChangePassword(evt){
+    if (!("newPass" in evt.detail) || evt.detail.newPass === "") {
+      return new Toast("Invalid Password Choice", "alert");
+    }
+    this.db.changePassword(this._user.name, evt.detail.newPass).then(() => {
+      new Toast("Password Changed");
+    }).catch(e => {
+      new Toast(`Error: ${e.name}`, "alert");
+    });
+  }
 
   _addEventListeners(){
     document.addEventListener("togglefav", this._toggleFav);
@@ -362,6 +382,8 @@ class WuZhu {
     document.addEventListener("autoSaveArticle", this._saveArticle);
     document.addEventListener("deleteArticle", this._deleteArticle);
     document.addEventListener("search", this._search)
+    document.addEventListener("logout", this._handleLogout);
+    document.addEventListener("changePassword", this._handleChangePassword);
   }
 
   _titleCase(url){
