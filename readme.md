@@ -8,7 +8,7 @@ $ npm install
 $ $EDITOR config.json #There's a config.json.example you could copy or move
 $ gulp
 ```
-Then just serve the build directory with your favourite web server. For it to work as a WebApp™ Google and others require it to be served over HTTPS,
+Then just serve the build directory with your favourite web server. For it to work as a ProgressiveWebApp™ Google and others require it to be served over HTTPS,
 so please keep that in mind. It will still work without HTTPS, you just lose caching so no offline mode. (Could be solved with an appcache, pull requests welcome).
 
 # Requirements
