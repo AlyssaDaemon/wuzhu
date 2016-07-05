@@ -16,8 +16,7 @@
 </template>
 <script src="/js/side-nav.js" ></script>
 <script>
-(() => {
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerSideNav(doc);
+(function(){
+  registerSideNav(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
 })();
 </script>

@@ -14,8 +14,7 @@
 </template>
 <script src="/js/search-card.js"></script>
 <script>
-(() => {
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerSearchCard(doc);
+(function(){
+  registerSearchCard(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
 })();
 </script>

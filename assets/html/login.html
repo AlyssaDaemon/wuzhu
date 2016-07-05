@@ -15,8 +15,7 @@
 </template>
 <script src="/js/login.js"></script>
 <script>
-(()=>{
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerLogin(doc);
+(function(){
+  registerLogin(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
 })();
 </script>

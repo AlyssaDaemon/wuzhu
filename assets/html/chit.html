@@ -11,8 +11,7 @@
 <script src="/js/chit.js"></script>
 <script>
 "use strict";
-(() => {
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerChit(doc);
+(function(){
+  registerChit(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
 })();
 </script>

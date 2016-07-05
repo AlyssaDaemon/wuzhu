@@ -15,8 +15,7 @@
 </template>
 <script src="/js/search-results.js" ></script>
 <script>
-(()=> {
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerSearchResults(doc);
+(function(){
+  registerSearchResults(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
 })();
 </script>

@@ -63,9 +63,7 @@
 <script src="/js/editor.js"></script>
 <script type="text/javascript">
   "use strict";
-  (() => {
-   let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-   registerEditor(doc);
-
+  (function(){
+   registerEditor(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
   })();
 </script>

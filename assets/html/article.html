@@ -43,9 +43,7 @@
 <script src="/js/article.js"></script>
 <script>
   "use strict";
-  (() => {
-    let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-    registerArticle(doc);
-
+  (function(){
+    registerArticle(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
   })();
 </script>

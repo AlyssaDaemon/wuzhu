@@ -13,9 +13,7 @@
 <script src="/js/header.js"></script>
 <script>
   "use strict";
-  (() => {
-  let doc = document.currentScript.ownerDocument || document._currentScript.ownerDocument;
-  registerHeader(doc);
-
+  (function(){
+  registerHeader(document.currentScript.ownerDocument || document._currentScript.ownerDocument);
   })();
 </script>
