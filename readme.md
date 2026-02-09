@@ -1,3 +1,7 @@
+> [!WARNING]
+> This is now read only, it hasn't been touched in 10 years.
+> It was an interesting idea, but never had the time to work on it.
+
 A Simple, progressive webapp ready wiki. It's nowhere near ready yet, but it's getting there.
 
 # Install
